@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family:var(--fonte);
+    font-size: var(--tamanho-da-fonte);
+    color: var(--cor-do-texto);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}

@@ -1,0 +1,42 @@
+header{
+    display: flex;
+    flex-direction: column;
+}
+.menu-secundario{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 20px;
+    background-color:var(--cor-terciaria);
+    gap: 10px;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.menu-primario{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.menu-navegacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.logo{
+    width: 200px;
+}
