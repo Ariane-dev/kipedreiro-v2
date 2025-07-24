@@ -1,0 +1,38 @@
+
+.projetos{
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    gap: 20px;
+    background-color:var(--cor-terciaria)
+}
+.container-projetos{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 60px 20px;
+}
+.cards-projetos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card-projeto{
+    flex-basis: calc(50% - 10px);
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.projeto-imagem{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.4s ease-in-out;
+    margin-bottom: 20px;
+}

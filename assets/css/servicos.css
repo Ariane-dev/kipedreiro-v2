@@ -54,7 +54,7 @@
     padding: 10px;
     text-align: center;
     transform: translateY(100%);
-    transition: transform 0.7s cubic-bezier(0,87, -0,27, 0,15, 0,56);
+    transition: transform 0.1s cubic-bezier(0,87, -0,27, 0,15, 0,56);
     backdrop-filter: blur(5px);
 
 }
