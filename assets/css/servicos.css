@@ -1,0 +1,64 @@
+.container-servicos{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.titulo{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+.titulo-interno{
+    color: gold;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card-servico {
+    flex-basis: calc(25% - 10px);
+    height: 280px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.servico-imagem{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.4s ease;
+}
+
+.figcaption-servico{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #474a4f7c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.7s cubic-bezier(0,87, -0,27, 0,15, 0,56);
+    backdrop-filter: blur(5px);
+
+}
+
+.card-servico:hover .figcaption-servico{
+    transform: translateY(0%);
+}

@@ -12,7 +12,7 @@
     align-items: center;
     padding: 10px 20px;
     position: absolute;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.589), transparent,);
+    background: #474a4fa8;
     backdrop-filter: blur(10px);
     color: white;
     width: 100%;
@@ -21,7 +21,7 @@
 }
 
 .botao-orcamento{
-    background-color: yellow;
+    background-color: #ffff00;
     color: #000;
     padding: 10px 20px;
     border: none;
