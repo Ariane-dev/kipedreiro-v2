@@ -1,0 +1,12 @@
+.testemunhos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 30px;
+}
+
+.titulo-testemunhos{
+    color: white;
+}

@@ -87,3 +87,23 @@
 .card-servico:hover .figcaption-servico{
     transform: translateY(0%);
 }
+
+.botao-servico-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.botao-servico{
+    background-color: rgb(255, 214, 30);
+    color: var(--cor-terciaria);
+    padding: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.botao-servico:hover{
+    background-color: #27292c;
+    color: var(--cor-de-fundo);
+}

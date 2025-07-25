@@ -8,6 +8,11 @@
     padding: 20px;
     color: var(--cor-de-fundo);
 }
+
+.titulo-interno-projeto{
+    color: gold;
+}
+
 .projetos{
     background-color: var(--cor-terciaria);
 }
