@@ -107,3 +107,34 @@
     background-color: #27292c;
     color: var(--cor-de-fundo);
 }
+
+.cards-coluna{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card-servico-pagina{
+    
+    height: 280px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    align-items: center;
+    padding: 8px;
+
+}
+
+.figure-pagina-servico{
+    display: flex;
+}
+
+.figcaption-servico-pagina{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-50%);
+}

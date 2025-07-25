@@ -1,6 +1,7 @@
 header{
     display: flex;
     flex-direction: column;
+    box-shadow: 3px 2px;
 }
 .menu-secundario{
     display: flex;
