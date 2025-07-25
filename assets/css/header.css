@@ -10,11 +10,28 @@ header{
     padding: 5px 20px;
     background-color:var(--cor-terciaria);
     gap: 10px;
+    height: 50px;
+}
+span{
+    position: relative;
+    font-size: 1em;
+    color: var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
 }
 
 .icon{
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
 }
 
 .menu-primario{
@@ -26,6 +43,7 @@ header{
     align-items: center;
     padding: 10px 20px;
     gap: 20px;
+    height: 200px;
 }
 
 .menu-navegacao{
@@ -34,9 +52,10 @@ header{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    font-size: 22px;
 
 }
 
 .logo{
-    width: 200px;
+    width: 400px;
 }
