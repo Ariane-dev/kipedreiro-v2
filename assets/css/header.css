@@ -2,6 +2,7 @@ header{
     display: flex;
     flex-direction: column;
     box-shadow: 3px 2px;
+    text-decoration: none;
 }
 .menu-secundario{
     display: flex;
@@ -26,6 +27,7 @@ span{
     justify-content: center;
     padding: 10px;
     gap: 10px;
+    
 }
 
 .icon{
@@ -44,7 +46,12 @@ span{
     align-items: center;
     padding: 10px 20px;
     gap: 20px;
-    height: 200px;
+    height: 200px;  
+}
+
+.texto-menu{
+    text-decoration: none;
+    color: inherit;
 }
 
 .menu-navegacao{
@@ -59,4 +66,9 @@ span{
 
 .logo{
     width: 400px;
+}
+
+.texto-menu:hover{
+    border-radius: 10px;
+    border-bottom: 2px solid #102e3a;
 }

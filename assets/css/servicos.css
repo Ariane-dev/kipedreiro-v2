@@ -93,6 +93,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+    margin-top: -20px;
 }
 .botao-servico{
     background-color: rgb(255, 214, 30);
@@ -102,6 +103,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 25px;
+    text-decoration: none;
 }
 .botao-servico:hover{
     background-color: #27292c;

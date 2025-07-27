@@ -28,3 +28,12 @@ footer .container{
     padding: 10px 0 0 0;
 }
 
+.texto-footer{
+    text-decoration: none;
+    color: inherit;
+}
+
+.texto-footer:hover{
+    border-radius: 5px;
+    border-bottom: 2px solid black;
+}
