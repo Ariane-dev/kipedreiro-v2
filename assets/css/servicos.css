@@ -93,6 +93,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+    margin-top: -20px;
 }
 .botao-servico{
     background-color: rgb(255, 214, 30);
