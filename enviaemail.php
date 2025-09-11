@@ -1,5 +1,5 @@
 <?php
-include_once 'backend>Database/database.php';
+include_once 'backend/Database/database.php';
 include_once 'backend/Usuario.php';
 //operação ternaria
 $nome = $_POST["nome"] ?? '' ;
