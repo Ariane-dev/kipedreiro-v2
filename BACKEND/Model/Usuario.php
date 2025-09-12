@@ -1,13 +1,23 @@
 <?php
+/*
+função é um bloco { } de código que pode ser reutilizado
+e pode receber (parametros)
+e ele fica esperando ser chamado
+*/
 
 /* Executa uma instrução preparada passando um array de valores */
 function buscaUsuario($db){
-    $sql = 'SELECT nome_usuario, email_usuario
-    FROM tbl_usuario
-    WHERE id_usuario = :id';
+    $sql = 'SELECT id_usuario, nome_usuario, email_usuario FROM tbl_usuario';
     $statement = $db->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
-    $statement->execute(['id' => 2]);
+    $statement->execute();
     return $resultado = $statement->fetchAll();
+}
+
+function buscarUsuarioPorId($db, $id){
+    $sql = 'SELECT id_usuario, nome_usuario, email_usuario FROM tbl_usuario WHERE id_usuario = :id';
+    $statment = $db->prepare($sql);
+    $statment->bindParam(':id', $id);
+    return $statment->execute();
 }
 
 function registrarUsuario($db, $nome, $email, $senha){
