@@ -1,6 +1,6 @@
 <?php
 include_once 'backend/Database/database.php';
-include_once 'backend/Model/contato.php';
+include_once 'backend/Models/contato.php';
 //operação ternaria
 $nome = $_POST["nome"] ?? '' ;
 $email = $_POST["email"] ?? '' ;
