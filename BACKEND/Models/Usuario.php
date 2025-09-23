@@ -1,5 +1,7 @@
 <?php
-class usuario{
+namespace App\Kipedreiro\Models;
+use PDO;
+class Usuario{
     private $id_usuario;
     private $nome_usuario;
     private $email_usuario;

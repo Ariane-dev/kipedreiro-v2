@@ -1,4 +1,5 @@
 <?php
+use App\Kipedreiro\Models\Usuario;
 require_once __DIR__.'/../Models/Usuario.php';
 require_once __DIR__.'/../Database/Database.php';
 

@@ -1,15 +1,15 @@
 <?php
 namespace App\Kipedreiro\Controllers;
 
-use App\Kipedreiro\Models\usuario;
+use App\Kipedreiro\Models\Usuario;
 use App\Kipedreiro\Database\Database;
 
 class UsuarioController{
     public $usuario;
     public $db;
     public function __construct() {
-        $this->db == Database::getInstance();
-       $this->usuario = new usuario($this->db);
+        $this->db = Database::getInstance();
+       $this->usuario = new Usuario($this->db);
     }
     // index
     public function index(){

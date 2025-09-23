@@ -1,4 +1,5 @@
 <?php
+namespace App\Kipedreiro\Models;
 /*
 função é um bloco { } de código que pode ser reutilizado
 e pode receber (parametros)
