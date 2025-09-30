@@ -3,6 +3,7 @@ namespace App\Kipedreiro\Controllers;
 
 use App\Kipedreiro\Models\Usuario;
 use App\Kipedreiro\Database\Database;
+use App\Kipedreiro\Core\View;
 
 class UsuarioController{
     public $usuario;
@@ -14,16 +15,26 @@ class UsuarioController{
     // index
     public function index(){
         $resultado = $this->usuario->buscarUsuarios();
-        return $resultado;
+        var_dump($resultado);
     }
 
-    //registrar
+    public function viewListarUsuarios(){
+        $dados = $this->usuario->buscarUsuarios();
+        View::render("usuario/index", ["usuarios" => $dados]);
+    }
 
-    // login
+        public function viewCriarUsuarios(){
+        View::render("usuario/create");
+    }
+        public function viewEditarUsuarios(){
+        View::render("usuario/edit");
+    }
+        public function viewExcluirUsuarios(){
+        View::render("usuario/delete");
+    }
 
-    // atualizar
+    public function salvarUsuario(){
+        echo "Salvar Usuario";
+    }
 
-    // deletar
-
-    // chamada de api
 }
