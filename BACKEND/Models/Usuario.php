@@ -54,7 +54,7 @@ class Usuario{
     }
 
     // metodo de atualizar o usuario
-    function atualizarUsuario($nome, $email, $senha, $tipo, $status){
+    function atualizarUsuario($id,$nome, $email, $senha, $tipo, $status){
         $senha = password_hash($senha, PASSWORD_DEFAULT);
         $dataatual = date('Y-m-d H:i:s');
         $sql = "UPDATE tbl_usuario SET nome_usuario = :nome,
