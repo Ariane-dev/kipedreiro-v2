@@ -33,19 +33,33 @@ class Usuario{
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+     function buscarUsuariosPorID(int $id){
+        $sql = 'SELECT * FROM tbl_usuario where id_usuario = :id_usuario and excluido_em IS NULL';
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':id_usuario', $id);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
     // metodo de inserir usuario
-    function inserirUsuario($nome, $email, $senha, $tipo, $status){
+    function inserirUsuario(
+        $nome, 
+        $email, 
+        $senha,
+        $tipo, 
+        $status,
+        $imagem){
         $senha = password_hash($senha, PASSWORD_DEFAULT);
         $sql = 'INSERT INTO tbl_usuario (nome_usuario, email_usuario, 
-        senha_usuario, tipo_usuario, status_usuario )
-             VALUES (:nome, :email, :senha, :tipo, :status)';
+        senha_usuario, tipo_usuario, status_usuario, foto_usuario)
+             VALUES (:nome, :email, :senha, :tipo, :status, :foto_usuario)';
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':senha', $email);
         $stmt->bindParam(':tipo', $tipo);
         $stmt->bindParam(':status', $status);
+        $stmt->bindParam(':foto_usuario', $imagem);
         if($stmt->execute()){
             return $this->db->lastInsertId();
         }else{
