@@ -11,7 +11,7 @@ class Rotas
        // O caminho da url   O nome do controller que e o metodo do controller
        "/usuarios" => "UsuarioController@index",
        "/usuario/criar" => "UsuarioController@viewCriarUsuarios",
-       "/usuario/listar" => "UsuarioController@viewListarUsuarios",
+       "/usuario/listar/{pagina}" => "UsuarioController@viewListarUsuarios",
         "/usuario/editar/{id}" => "UsuarioController@viewEditarUsuarios",
         "/usuario/excluir/{id}" => "UsuarioController@viewExcluirUsuarios",
         "/usuario/{id}/relatorio/{dataInicial}/{dataFinal}" => "UsuarioController@relatorioUsuario",
