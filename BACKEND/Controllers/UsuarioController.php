@@ -7,8 +7,11 @@ use App\Kipedreiro\Database\Database;
 use App\Kipedreiro\Core\View;
 use App\Kipedreiro\Core\Redirect;
 use App\Kipedreiro\Validadores\UsuarioValidador;
+use App\Kipedreiro\Controllers\Admin\AuthenticatedController;
+use App\Kipedreiro\Controllers\Admin\AdminController;
 
-class UsuarioController{
+
+class UsuarioController extends AdminController{
     public $usuario;
     public $db;
     public $gerenciarImagem;
@@ -63,6 +66,7 @@ class UsuarioController{
     public function viewCriarUsuarios(){
         View::render("usuario/create");
     }
+
     public function viewEditarUsuarios(int $id){
         $dados = $this->usuario->buscarUsuariosPorID($id);
         foreach($dados as $usuario){
@@ -71,14 +75,15 @@ class UsuarioController{
         }
         View::render("usuario/edit", ["usuario"=>$dados]);
     }
+
     public function viewExcluirUsuarios($id){
         View::render("usuario/delete", ["id_usuario"=>$id]);
     }
+
     public function relatorioUsuario($id, $dataInicial, $dataFinal){
         View::render("usuario/relatorio", 
         ["id"=>$id, "dataInicial"=>$dataInicial, "dataFinal"=>$dataFinal]);
     }
-
  
     public function atualizarUsuario(){
         echo "atualizar Usuario";
