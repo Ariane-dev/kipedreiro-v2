@@ -161,7 +161,7 @@ class Usuario{
             return false;
         }
         $usuario = $usuario[0];
-        if(!password_verify($senha, $usuario['senha_usuario'])) {
+        if(password_verify($senha, $usuario['senha_usuario'])) {
             return $usuario;
         }
         return false;
