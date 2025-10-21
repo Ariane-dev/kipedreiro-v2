@@ -21,7 +21,12 @@ class Rotas
         '/logout' => 'AuthController@logout',
         '/admin/dashboard' => 'Admin\DashboardController@index',
 
-      
+        '/servico/listar' => 'ServicoController@viewListarServicos',
+        '/servico/listar/{pagina}' => 'ServicoController@viewListarServicos',
+        '/servico/criar' => 'ServicoController@viewCriarServico',
+        '/api/servicos' => 'PublicApiController@getServicos',
+        '/servico/editar/{id}' => 'ServicoController@viewEditarServico',
+        '/servico/excluir/{id}' => 'ServicoController@viewExcluirServico',
         
     ],
     "POST" => [
@@ -31,6 +36,10 @@ class Rotas
 
         '/register' => 'AuthController@cadastrarUsuario',
         '/login' => 'AuthController@authenticar',
+
+        '/servico/salvar' => 'ServicoController@salvarServico',
+        '/servico/atualizar' => 'ServicoController@atualizarServico',
+        '/servico/deletar' => 'ServicoController@deletarServico',
         
     ]
         ];
