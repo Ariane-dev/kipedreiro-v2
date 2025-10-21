@@ -72,13 +72,13 @@
         </div>
     </footer>
     <script>
-        document.addEventListener('DomContestLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {
             const container = document.querySelector('.servico__lista');
             if (!container) return;
             container.innerHTML = '<p>Carregando serviços...</p>';
             fetch('/backend/api/servicos')
                 .then(response => {
-                    if (!reponse.ok){
+                    if (!response.ok){
                         throw new Error('Falha ao carregar dados da rede.');
                     }
                     return response.json();
@@ -89,9 +89,10 @@
                     }
                     container.innerHTML = '';
                     json.data.forEach(servico => {
+
                         const cardHtml = `
                             <div class="card" data-service="${servico.nome_servico.toLowerCase()}">
-                                <div class="card_frente" style="backgound-image: url('${servico.caminho_imagem}');">
+                                <div class="card_frente" style="background-image: url('${servico.caminho_imagem}');">
                                     <h3 class="card__titulo">${servico.nome_servico.toUpperCase()}</h3>
                                 </div>
                                 <div class="card__verso">

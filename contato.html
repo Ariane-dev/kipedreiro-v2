@@ -22,7 +22,7 @@
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="#processos">Processos</a></li>
                 <li><a href="#testemunhos">Testemunhos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -77,6 +77,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
+            let response = await fetch("https://openlibrary.org/search.json?q=the%2Blord%2Bof%2Bthe%2Brings", { 
+            method: "GET"
+            });
+            let data = await response.json();
+            console.log(data);
+
+        })
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
