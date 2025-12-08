@@ -15,6 +15,9 @@ class Rotas
         "/usuario/editar/{id}" => "UsuarioController@viewEditarUsuarios",
         "/usuario/excluir/{id}" => "UsuarioController@viewExcluirUsuarios",
         "/usuario/{id}/relatorio/{dataInicial}/{dataFinal}" => "UsuarioController@relatorioUsuario",
+        '/api/usuarios/{pagina}' => 'APIUsuarioController@getUsuarios',
+        '/api/usuarios' => 'APIUsuarioController@getUsuarios',
+
 
         '/register' => 'AuthController@register',
         '/login' => 'AuthController@login',

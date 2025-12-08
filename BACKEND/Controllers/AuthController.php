@@ -8,16 +8,19 @@ use App\Kipedreiro\Models\Usuario;
 use App\Kipedreiro\Database\Database;
 use App\Kipedreiro\Core\Session;
 use App\Kipedreiro\Validadores\UsuarioValidador;
+use App\Kipedreiro\Core\NotificacaoEmail;
 
 
 class AuthController{
     private Usuario $usuarioModel;
     private Session $session;
+    private NotificacaoEmail $NotificacaoEmail;
 
     public function __construct(){
         $db = Database::getInstance();
         $this->usuarioModel = new Usuario($db);
         $this->session = new Session();
+        $this->NotificacaoEmail = new NotificacaoEmail();
     }
 
     public function login(): void {
@@ -67,10 +70,11 @@ class AuthController{
              }
              $novoUsuarioId =$this->usuarioModel->inserirUsuario($nome, $email, $senha, 'usuario', 'Ativo', 'null');
              if ($novoUsuarioId) {
+                $this->NotificacaoEmail->boasVindas($email, $nome);
                 Redirect::redirecionarComMensagem('login', 'sucess', 'Cadastro realizado: Por favor, faça o login.');
+                
              } else {
                 Redirect::redirecionarComMensagem('register', 'error', 'Erro no servidor. Tente novamente.');
              }
         }
-
 }
